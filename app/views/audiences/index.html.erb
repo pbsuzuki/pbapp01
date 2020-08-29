@@ -1,0 +1,4 @@
+<h1>施設一覧</h1>
+<% @audiences.each do |audience| %>
+  <p><%= link_to(audience.name, "/audiences/#{audience.id}") %></p>
+<% end %>

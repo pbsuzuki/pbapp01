@@ -1,0 +1,4 @@
+<h1>奏者一覧</h1>
+<% @performers.each do |performer| %>
+  <p><%= link_to(performer.name, "/performers/#{performer.id}") %></p>
+<% end %>

@@ -1,0 +1,12 @@
+<h1>奏者情報</h1>
+<p><%= @performer.name %></p>
+<p>登録日時：<%= @performer.created_at %></p>
+★☆★☆★☆★☆★☆★☆★☆★☆
+
+<h2>演奏履歴</h2>
+<% @concerts.each do |concert| %>
+  <% audience = Audience.find_by(id: concert.audience_id) %>
+  <p><%= concert.date %></p>
+  <p><%= audience.name %></p>
+  ----------
+<% end %>
